@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Elite Skills &amp; Achievements | Samuel Dim</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&amp;family=Inter:wght@200;300;400;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6A1B9A", // Deep Purple
+                        "gold": "#D4AF37",
+                        "luxury-white": "#FFFFFF",
+                        "elite-black": "#0A0A0A",
+                    },
+                    fontFamily: {
+                        "serif": ["Playfair Display", "serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .skill-item:hover {
+                transform: scale(1.02);
+                box-shadow: 0 10px 40px -15px rgba(212, 175, 55, 0.25);
+            }
+            .gold-metallic-seal {
+                background: linear-gradient(135deg, #D4AF37 0%, #F1D37E 50%, #B8860B 100%);
+                box-shadow: 0 4px 10px rgba(184, 134, 11, 0.4);
+            }
+            .glassmorphic-card {
+                background: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(16px);
+                border: 1px solid #0A0A0A;
+            }
+            .resume-btn:hover {
+                background-color: transparent;
+                border-color: #D4AF37;
+                color: #6A1B9A !important;
+            }
+            .luxury-spacing {
+                padding-top: 12rem;
+                padding-bottom: 12rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-luxury-white font-sans text-elite-black selection:bg-gold selection:text-white">
+    <header class="fixed top-0 w-full z-[60] px-4 md:px-6 py-4 md:py-6">
+        <nav
+            class="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-10 py-3 md:py-4 rounded-full bg-white/95 backdrop-blur-sm shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-gold/10">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="size-8 md:size-9 bg-elite-black flex items-center justify-center rounded-sm rotate-45">
+                        <span class="material-symbols-outlined text-gold -rotate-45 text-lg">diamond</span>
+                    </div>
+                    <h1 class="font-serif text-lg md:text-xl font-black tracking-tighter text-elite-black uppercase">
+                        SAMUEL DIM</h1>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center gap-10 lg:gap-12">
+                <a class="text-[10px] lg:text-xs uppercase tracking-[0.4em] font-bold text-elite-black/60 hover:text-primary transition-colors"
+                    href="index.html">Home</a>
+                <a class="text-[10px] lg:text-xs uppercase tracking-[0.4em] font-bold text-elite-black/60 hover:text-primary transition-colors"
+                    href="about.html">About</a>
+                <a class="text-[10px] lg:text-xs uppercase tracking-[0.4em] font-bold text-elite-black/60 hover:text-primary transition-colors"
+                    href="gallery.html">Gallery</a>
+                <a class="text-[10px] lg:text-xs uppercase tracking-[0.4em] font-bold text-primary"
+                    href="skill.html">Skills</a>
+                <a class="text-[10px] lg:text-xs uppercase tracking-[0.4em] font-bold text-elite-black/60 hover:text-primary transition-colors"
+                    href="contact.html">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="contact.html"
+                    class="hidden sm:block resume-btn bg-elite-black text-white border border-gold px-6 md:px-8 py-2 md:py-3 text-[10px] md:text-[10px] font-bold uppercase tracking-[0.3em] transition-all duration-500">
+                    Inquire
+                </a>
+                <button id="mobile-menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2 z-[70]">
+                    <span class="w-6 h-0.5 bg-elite-black transition-all duration-300 origin-center"></span>
+                    <span class="w-6 h-0.5 bg-elite-black transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-elite-black transition-all duration-300 origin-center"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-white z-[65] translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col items-center justify-center gap-8">
+            <a class="text-2xl font-serif italic text-elite-black hover:text-primary transition-colors"
+                href="index.html">Home</a>
+            <a class="text-2xl font-serif italic text-elite-black hover:text-primary transition-colors"
+                href="about.html">About</a>
+            <a class="text-2xl font-serif italic text-elite-black hover:text-primary transition-colors"
+                href="gallery.html">Gallery</a>
+            <a class="text-2xl font-serif italic text-primary font-bold" href="skill.html">Skills</a>
+            <a class="text-2xl font-serif italic text-elite-black hover:text-primary transition-colors"
+                href="contact.html">Contact</a>
+            <a href="contact.html"
+                class="mt-8 bg-elite-black text-white px-12 py-4 rounded-full text-sm uppercase tracking-widest font-bold">
+                Get In Touch
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="pt-48 pb-24 px-12 md:px-24">
+            <div class="max-w-screen-xl mx-auto">
+                <span class="text-gold text-xs font-bold tracking-[0.6em] uppercase mb-6 block">Capabilities &amp;
+                    Merits</span>
+                <h1 class="text-7xl md:text-9xl font-black font-serif tracking-tight text-elite-black leading-none">
+                    Elite <br />Showcase
+                </h1>
+            </div>
+        </section>
+        <section class="px-12 md:px-24 mb-48">
+            <div class="max-w-screen-xl mx-auto space-y-32">
+                <div class="group">
+                    <div class="flex items-end justify-between mb-8">
+                        <div class="flex items-center gap-6">
+                            <span class="text-elite-black font-serif italic text-4xl">01</span>
+                            <h2 class="text-xl font-bold uppercase tracking-[0.3em] text-elite-black">Management</h2>
+                        </div>
+                    </div>
+                    <div class="h-[1px] w-full bg-gold/30 mb-12"></div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="skill-item bg-white p-10 transition-all duration-500 border border-transparent">
+                            <h3 class="text-primary text-3xl font-serif mb-2">Strategic Vision</h3>
+                            <p class="text-primary/50 text-[10px] uppercase tracking-widest font-bold">Enterprise
+                                Leadership</p>
+                        </div>
+                        <div class="skill-item bg-white p-10 transition-all duration-500 border border-transparent">
+                            <h3 class="text-primary text-3xl font-serif mb-2">Change Ops</h3>
+                            <p class="text-primary/50 text-[10px] uppercase tracking-widest font-bold">Agile
+                                Transformations</p>
+                        </div>
+                        <div class="skill-item bg-white p-10 transition-all duration-500 border border-transparent">
+                            <h3 class="text-primary text-3xl font-serif mb-2">Global Stakeholders</h3>
+                            <p class="text-primary/50 text-[10px] uppercase tracking-widest font-bold">External
+                                Relations</p>
+                        </div>
+                        <div class="skill-item bg-white p-10 transition-all duration-500 border border-transparent">
+                            <h3 class="text-primary text-3xl font-serif mb-2">Resource Flow</h3>
+                            <p class="text-primary/50 text-[10px] uppercase tracking-widest font-bold">Capital
+                                Optimization</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="flex items-end justify-between mb-8">
+                        <div class="flex items-center gap-6">
+                            <span class="text-elite-black font-serif italic text-4xl">02</span>
+                            <h2 class="text-xl font-bold uppercase tracking-[0.3em] text-elite-black">Communication</h2>
+                        </div>
+                    </div>
+                    <div class="h-[1px] w-full bg-gold/30 mb-12"></div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="skill-item bg-white p-10 transition-all duration-500 border border-transparent">
+                            <h3 class="text-primary text-3xl font-serif mb-2">Public Speaking</h3>
+                            <p class="text-primary/50 text-[10px] uppercase tracking-widest font-bold">Keynote Delivery
+                            </p>
+                        </div>
+                        <div class="skill-item bg-white p-10 transition-all duration-500 border border-transparent">
+                            <h3 class="text-primary text-3xl font-serif mb-2">Narrative Design</h3>
+                            <p class="text-primary/50 text-[10px] uppercase tracking-widest font-bold">Corporate
+                                Storytelling</p>
+                        </div>
+                        <div class="skill-item bg-white p-10 transition-all duration-500 border border-transparent">
+                            <h3 class="text-primary text-3xl font-serif mb-2">Negotiation</h3>
+                            <p class="text-primary/50 text-[10px] uppercase tracking-widest font-bold">High-Stakes
+                                Mediation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="flex items-end justify-between mb-8">
+                        <div class="flex items-center gap-6">
+                            <span class="text-elite-black font-serif italic text-4xl">03</span>
+                            <h2 class="text-xl font-bold uppercase tracking-[0.3em] text-elite-black">Technical</h2>
+                        </div>
+                    </div>
+                    <div class="h-[1px] w-full bg-gold/30 mb-12"></div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="skill-item bg-white p-10 transition-all duration-500 border border-transparent">
+                            <h3 class="text-primary text-3xl font-serif mb-2">Cloud Systems</h3>
+                            <p class="text-primary/50 text-[10px] uppercase tracking-widest font-bold">Architecture
+                                Design</p>
+                        </div>
+                        <div class="skill-item bg-white p-10 transition-all duration-500 border border-transparent">
+                            <h3 class="text-primary text-3xl font-serif mb-2">DevOps Flow</h3>
+                            <p class="text-primary/50 text-[10px] uppercase tracking-widest font-bold">Automation
+                                Mastery</p>
+                        </div>
+                        <div class="skill-item bg-white p-10 transition-all duration-500 border border-transparent">
+                            <h3 class="text-primary text-3xl font-serif mb-2">Cybersecurity</h3>
+                            <p class="text-primary/50 text-[10px] uppercase tracking-widest font-bold">Threat Mitigation
+                            </p>
+                        </div>
+                        <div class="skill-item bg-white p-10 transition-all duration-500 border border-transparent">
+                            <h3 class="text-primary text-3xl font-serif mb-2">Full-Stack</h3>
+                            <p class="text-primary/50 text-[10px] uppercase tracking-widest font-bold">End-to-End Build
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="flex items-end justify-between mb-8">
+                        <div class="flex items-center gap-6">
+                            <span class="text-elite-black font-serif italic text-4xl">04</span>
+                            <h2 class="text-xl font-bold uppercase tracking-[0.3em] text-elite-black">Tools</h2>
+                        </div>
+                    </div>
+                    <div class="h-[1px] w-full bg-gold/30 mb-12"></div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="skill-item bg-white p-10 transition-all duration-500 border border-transparent">
+                            <h3 class="text-primary text-3xl font-serif mb-2">Tableau</h3>
+                            <p class="text-primary/50 text-[10px] uppercase tracking-widest font-bold">BI Analytics</p>
+                        </div>
+                        <div class="skill-item bg-white p-10 transition-all duration-500 border border-transparent">
+                            <h3 class="text-primary text-3xl font-serif mb-2">Figma</h3>
+                            <p class="text-primary/50 text-[10px] uppercase tracking-widest font-bold">UI/UX Systems</p>
+                        </div>
+                        <div class="skill-item bg-white p-10 transition-all duration-500 border border-transparent">
+                            <h3 class="text-primary text-3xl font-serif mb-2">AWS</h3>
+                            <p class="text-primary/50 text-[10px] uppercase tracking-widest font-bold">Cloud Management
+                            </p>
+                        </div>
+                        <div class="skill-item bg-white p-10 transition-all duration-500 border border-transparent">
+                            <h3 class="text-primary text-3xl font-serif mb-2">Jira/Linear</h3>
+                            <p class="text-primary/50 text-[10px] uppercase tracking-widest font-bold">Workflow Ops</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-[#F9F9F9] luxury-spacing border-t border-gold/10">
+            <div class="px-12 md:px-24">
+                <div class="max-w-screen-xl mx-auto">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+                        <div>
+                            <span class="text-gold text-xs font-bold tracking-[0.6em] uppercase mb-4 block">Signature
+                                Milestones</span>
+                            <h2 class="text-elite-black text-6xl md:text-8xl font-serif font-black tracking-tighter">
+                                Hall of Fame</h2>
+                        </div>
+                        <p class="text-primary max-w-xs text-sm font-medium leading-relaxed italic">
+                            A curated selection of industry-recognized certifications and professional accolades
+                            achieved through relentless pursuit of excellence.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                        <div
+                            class="glassmorphic-card p-12 flex flex-col items-center text-center transition-all duration-700 hover:-translate-y-4 group">
+                            <div
+                                class="w-24 h-24 rounded-full gold-metallic-seal flex items-center justify-center mb-10 relative">
+                                <div class="absolute inset-1 border border-white/30 rounded-full"></div>
+                                <span class="material-symbols-outlined text-white text-4xl">verified</span>
+                            </div>
+                            <h4 class="text-primary text-3xl font-serif font-bold mb-4">Cisco CCNA</h4>
+                            <p class="text-elite-black/60 text-[10px] uppercase tracking-[0.3em] mb-8 font-bold">
+                                Certified Network Associate</p>
+                            <div class="w-full pt-8 border-t border-elite-black/5">
+                                <img alt="Cisco Seal"
+                                    class="h-10 mx-auto grayscale group-hover:grayscale-0 transition-all duration-500"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwU7wupzOv20I-6ur5AlSzsUx5krLbTdW8QLYYGBUL6yNKmYzRewfQUZ3W5MP5IxncQJkm6zs6QRwuUNW-XD01DpvGePDnFpW3bUb9DxK7c9eFm6NPqoV5BY3-KKFHtcfISWcI3J4leYsKkzZV7cO-s2fT_qgIyufAq3RPWCrMhnso-fvU083gZ6MP9IzuDraugnvCFC1i2ZIv_jxfyEMrfKC-IYIpgIDom4GROqFhKF_EI_LoYewjIe_Mx_IWf1Ho4LTMfvvjmgY" />
+                                <p class="text-[9px] text-primary/30 mt-6 tracking-widest font-bold">LICENSE ID:
+                                    CS-992384-S</p>
+                            </div>
+                        </div>
+                        <div
+                            class="glassmorphic-card p-12 flex flex-col items-center text-center transition-all duration-700 hover:-translate-y-4 group">
+                            <div
+                                class="w-24 h-24 rounded-full gold-metallic-seal flex items-center justify-center mb-10 relative">
+                                <div class="absolute inset-1 border border-white/30 rounded-full"></div>
+                                <span class="material-symbols-outlined text-white text-4xl">stars</span>
+                            </div>
+                            <h4 class="text-primary text-3xl font-serif font-bold mb-4">MSG Agile</h4>
+                            <p class="text-elite-black/60 text-[10px] uppercase tracking-[0.3em] mb-8 font-bold">Project
+                                Leadership Expert</p>
+                            <div class="w-full pt-8 border-t border-elite-black/5">
+                                <div
+                                    class="h-10 flex items-center justify-center border border-elite-black text-elite-black text-[9px] font-bold tracking-[0.4em] uppercase group-hover:bg-elite-black group-hover:text-white transition-all">
+                                    OFFICIAL PMI SEAL</div>
+                                <p class="text-[9px] text-primary/30 mt-6 tracking-widest font-bold">CREDENTIAL
+                                    AG-2024-X</p>
+                            </div>
+                        </div>
+                        <div
+                            class="glassmorphic-card p-12 flex flex-col items-center text-center transition-all duration-700 hover:-translate-y-4 group">
+                            <div
+                                class="w-24 h-24 rounded-full gold-metallic-seal flex items-center justify-center mb-10 relative">
+                                <div class="absolute inset-1 border border-white/30 rounded-full"></div>
+                                <span class="material-symbols-outlined text-white text-4xl">workspace_premium</span>
+                            </div>
+                            <h4 class="text-primary text-3xl font-serif font-bold mb-4">UX Mastery</h4>
+                            <p class="text-elite-black/60 text-[10px] uppercase tracking-[0.3em] mb-8 font-bold">
+                                Interface Architecture</p>
+                            <div class="w-full pt-8 border-t border-elite-black/5">
+                                <img alt="Design Badge"
+                                    class="h-10 mx-auto grayscale group-hover:grayscale-0 transition-all duration-500"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDInu7xm1THdQlzSDZP25A46Qu-X-Z9_2BFD9BqItO7Oz2krubrDDWrplYQYN-V5rxhxq2NZ4a1MeEJBh22S6QeYPUPKfedyOM_5RV_8MoWqu6DCV_qC7M-OQZOn_hSvVD9mc_mn1In5g35SnILOVF7EAEpQr78qIazqujs03U15iRk0MCtbdCCosHFuWo4GTpV2FJLhDTa1Yfpggo30E_T0rNqOLFnuuw9dPk8TPDaeER5BvRY2hjVmOTyQ9YJbV-FnzqQPooejnI" />
+                                <p class="text-[9px] text-primary/30 mt-6 tracking-widest font-bold">UX-GL-77192-MODERN
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-luxury-white luxury-spacing">
+            <div class="max-w-screen-xl mx-auto px-12 text-center">
+                <h2 class="text-5xl md:text-7xl font-serif italic text-elite-black mb-12">Looking for the full
+                    narrative?</h2>
+                <a class="inline-flex items-center gap-6 group" href="#">
+                    <span class="text-primary text-xl font-bold uppercase tracking-[0.5em]">Request Private
+                        Portfolio</span>
+                    <div class="w-16 h-[1px] bg-gold group-hover:w-32 transition-all duration-500"></div>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-luxury-white py-20 border-t border-gold/10 px-6 md:px-24">
+        <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="flex items-center gap-4">
+                    <div class="size-10 bg-elite-black flex items-center justify-center rounded-sm rotate-45">
+                        <span class="material-symbols-outlined text-gold -rotate-45 text-sm">diamond</span>
+                    </div>
+                    <span class="font-serif font-black text-xl text-elite-black tracking-tight">SAMUEL DIM</span>
+                </a>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="flex gap-10">
+                    <a class="text-elite-black/40 hover:text-gold transition-colors text-[10px] font-bold tracking-widest uppercase"
+                        href="mailto:Samueldim03@gmail.com">Mail</a>
+                    <a class="text-elite-black/40 hover:text-gold transition-colors text-[10px] font-bold tracking-widest uppercase"
+                        href="https://wa.me/2348069698990">WhatsApp</a>
+                    <a class="text-elite-black/40 hover:text-gold transition-colors text-[10px] font-bold tracking-widest uppercase"
+                        href="https://linkedin.com">LinkedIn</a>
+                </div>
+                <p class="text-[10px] text-primary font-bold uppercase tracking-[0.8em]">Samuel Dim © 2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const toggleSpans = mobileMenuToggle.querySelectorAll('span');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('translate-x-full');
+
+            if (isOpen) {
+                mobileMenu.classList.add('translate-x-full');
+                toggleSpans[0].classList.remove('rotate-45', 'translate-y-2');
+                toggleSpans[1].classList.remove('opacity-0');
+                toggleSpans[2].classList.remove('-rotate-45', '-translate-y-2');
+            } else {
+                mobileMenu.classList.remove('translate-x-full');
+                toggleSpans[0].classList.add('rotate-45', 'translate-y-2');
+                toggleSpans[1].classList.add('opacity-0');
+                toggleSpans[2].classList.add('-rotate-45', '-translate-y-2');
+            }
+        });
+
+        // Close menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                toggleSpans[0].classList.remove('rotate-45', 'translate-y-2');
+                toggleSpans[1].classList.remove('opacity-0');
+                toggleSpans[2].classList.remove('-rotate-45', '-translate-y-2');
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+</body>
+
+</html>

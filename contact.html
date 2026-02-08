@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Grand Finale Contact Footer | Samuel Dim</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#050505",
+                        "deep-purple": "#4a1d96",
+                        "deep-black": "#050505",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .spin-slow {
+            animation: spin 12s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .gold-purple-glow:hover {
+            box-shadow: 0 0 25px rgba(242, 185, 13, 0.4);
+        }
+
+        .luxury-input {
+            background: transparent !important;
+            border: none !important;
+            border-bottom: 1px solid rgba(242, 185, 13, 0.3) !important;
+            transition: border-color 0.4s ease;
+        }
+
+        .luxury-input:focus {
+            border-bottom: 1px solid #f2b90d !important;
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        .social-icon {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .social-icon:hover {
+            color: #f2b90d !important;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display antialiased text-deep-purple dark:text-deep-purple selection:bg-primary/30">
+    <header class="fixed top-0 w-full z-[60] px-4 md:px-6 py-4 md:py-6">
+        <nav
+            class="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-10 py-3 md:py-4 rounded-full bg-black/80 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.3)] border border-white/10">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="size-8 md:size-9 bg-primary flex items-center justify-center rounded-sm rotate-45">
+                        <span class="material-symbols-outlined text-deep-purple -rotate-45 text-lg">diamond</span>
+                    </div>
+                    <h1 class="font-display text-lg md:text-xl font-black tracking-tighter text-white uppercase">SAMUEL
+                        DIM</h1>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center gap-10 lg:gap-12 text-white/70">
+                <a class="text-[10px] lg:text-xs uppercase tracking-[0.4em] font-bold hover:text-primary transition-colors"
+                    href="index.html">Home</a>
+                <a class="text-[10px] lg:text-xs uppercase tracking-[0.4em] font-bold hover:text-primary transition-colors"
+                    href="about.html">About</a>
+                <a class="text-[10px] lg:text-xs uppercase tracking-[0.4em] font-bold hover:text-primary transition-colors"
+                    href="gallery.html">Gallery</a>
+                <a class="text-[10px] lg:text-xs uppercase tracking-[0.4em] font-bold hover:text-primary transition-colors"
+                    href="skill.html">Skills</a>
+                <a class="text-[10px] lg:text-xs uppercase tracking-[0.4em] font-bold text-primary"
+                    href="contact.html">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="mailto:Samueldim03@gmail.com"
+                    class="hidden sm:block bg-primary hover:bg-primary/80 text-deep-black rounded-full px-6 md:px-8 py-2 md:py-2.5 text-[10px] md:text-xs uppercase tracking-widest font-bold shadow-lg transition-all">
+                    Inquire
+                </a>
+                <button id="mobile-menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2 z-[70]">
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-background-dark z-[65] translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col items-center justify-center gap-8">
+            <a class="text-2xl font-display italic text-white hover:text-primary transition-colors"
+                href="index.html">Home</a>
+            <a class="text-2xl font-display italic text-white hover:text-primary transition-colors"
+                href="about.html">About</a>
+            <a class="text-2xl font-display italic text-white hover:text-primary transition-colors"
+                href="gallery.html">Gallery</a>
+            <a class="text-2xl font-display italic text-white hover:text-primary transition-colors"
+                href="skill.html">Skills</a>
+            <a class="text-2xl font-display italic text-primary font-bold" href="contact.html">Contact</a>
+            <a href="mailto:Samueldim03@gmail.com"
+                class="mt-8 bg-primary text-deep-black px-12 py-4 rounded-full text-sm uppercase tracking-widest font-bold">
+                Get In Touch
+            </a>
+        </div>
+    </header>
+    <!-- Main Container -->
+    <div class="relative flex flex-col min-h-screen w-full overflow-x-hidden">
+        <!-- Narrative Section (The Hook) -->
+        <section class="flex flex-col items-center justify-center px-6 py-32 text-center max-w-5xl mx-auto">
+            <span class="text-primary tracking-[0.4em] text-xs font-bold uppercase mb-8">Ready for the next
+                chapter?</span>
+            <h1
+                class="text-5xl md:text-7xl font-extrabold tracking-tighter text-deep-black dark:text-white mb-12 leading-none">
+                Let's build the next <br /><span class="text-primary italic">masterpiece.</span>
+            </h1>
+            <div class="w-px h-24 bg-gradient-to-b from-primary to-transparent opacity-50"></div>
+        </section>
+        <!-- Footer Wrapper (Deep Black Transition) -->
+        <footer class="relative w-full bg-background-dark text-white pt-24 pb-12 px-6">
+            <!-- Spinning Badge (Royalinkhq Emblem) -->
+            <div class="absolute top-12 right-12 z-10 hidden lg:block">
+                <div class="spin-slow relative flex items-center justify-center w-24 h-24">
+                    <svg class="w-full h-full text-primary opacity-30" viewbox="0 0 100 100">
+                        <path d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" id="circlePath">
+                        </path>
+                        <text fill="currentColor" font-size="8.5" font-weight="bold">
+                            <textpath xlink:href="#circlePath">ROYALINKHQ • LUXURY DESIGN • EST 2024 •</textpath>
+                        </text>
+                    </svg>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-3xl">diamond</span>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+                <!-- Narrative & References Column -->
+                <div class="space-y-20">
+                    <div class="space-y-4">
+                        <h3 class="text-primary text-sm font-bold tracking-[0.2em] uppercase">Narrative</h3>
+                        <p class="text-deep-purple brightness-150 text-xl font-light leading-relaxed max-w-md">
+                            Crafting digital legacies for the world's most discerning brands. Every pixel is a
+                            calculated move toward perfection.
+                        </p>
+                    </div>
+                    <!-- Client Testimonials -->
+                    <div class="space-y-12">
+                        <div class="relative pl-12">
+                            <span
+                                class="absolute left-0 top-0 text-6xl text-primary font-serif leading-none opacity-50">“</span>
+                            <p class="text-deep-purple brightness-125 text-lg italic mb-4">
+                                Samuel doesn't just design; he orchestrates a digital symphony. The attention to detail
+                                is unparalleled in the luxury space.
+                            </p>
+                            <p class="text-white text-sm font-bold tracking-widest uppercase">— Adrian Sterling, 2023
+                            </p>
+                        </div>
+                        <div class="relative pl-12">
+                            <span
+                                class="absolute left-0 top-0 text-6xl text-primary font-serif leading-none opacity-50">“</span>
+                            <p class="text-deep-purple brightness-125 text-lg italic mb-4">
+                                A visionary collaborator who transformed our brand's digital presence into a high-end
+                                editorial experience.
+                            </p>
+                            <p class="text-white text-sm font-bold tracking-widest uppercase">— Elena Vause, 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Form Column -->
+                <div class="relative bg-white/5 p-8 lg:p-12 rounded-xl border border-white/5 backdrop-blur-sm">
+                    <h3 class="text-white text-3xl font-bold mb-12 tracking-tight">Inquire</h3>
+                    <form action="mailto:Samueldim03@gmail.com" class="space-y-12" method="POST" enctype="text/plain">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                            <div class="flex flex-col gap-2">
+                                <label class="text-[10px] uppercase tracking-[0.3em] text-primary/70 font-bold">Your
+                                    Name</label>
+                                <input class="luxury-input py-3 text-white placeholder:text-white/20"
+                                    placeholder="Samuel Dim" type="text" name="name" />
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-[10px] uppercase tracking-[0.3em] text-primary/70 font-bold">Email
+                                    Address</label>
+                                <input class="luxury-input py-3 text-white placeholder:text-white/20"
+                                    placeholder="MyEmail@portfolio.com" type="email" name="email" />
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label
+                                class="text-[10px] uppercase tracking-[0.3em] text-primary/70 font-bold">Message</label>
+                            <textarea class="luxury-input py-3 text-white placeholder:text-white/20 resize-none"
+                                placeholder="Tell me about your vision..." rows="4" name="message"></textarea>
+                        </div>
+                        <div class="pt-6">
+                            <button
+                                class="gold-purple-glow w-full md:w-auto px-12 py-5 bg-gradient-to-r from-primary via-primary to-deep-purple text-deep-black text-sm font-black uppercase tracking-[0.2em] transition-all duration-500 rounded-sm hover:translate-y-[-2px]"
+                                type="submit">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div
+                class="max-w-7xl mx-auto mt-32 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-4">
+                    <div class="size-6 text-primary">
+                        <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <span class="text-white font-bold tracking-widest uppercase text-sm">Samuel Dim</span>
+                </div>
+                <!-- Socials -->
+                <div class="flex items-center gap-10">
+                    <a class="social-icon text-deep-purple brightness-150" href="#">
+                        <span class="material-symbols-outlined text-3xl">public</span>
+                    </a>
+                    <a class="social-icon text-deep-purple brightness-150" href="#">
+                        <span class="material-symbols-outlined text-3xl">share</span>
+                    </a>
+                    <a class="social-icon text-deep-purple brightness-150" href="#">
+                        <span class="material-symbols-outlined text-3xl">auto_awesome</span>
+                    </a>
+                </div>
+                <p class="text-white/30 text-[10px] tracking-widest uppercase">
+                    © 2024 Royalinkhq. All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const toggleSpans = mobileMenuToggle.querySelectorAll('span');
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                const isOpen = !mobileMenu.classList.contains('translate-x-full');
+
+                if (isOpen) {
+                    mobileMenu.classList.add('translate-x-full');
+                    toggleSpans[0].classList.remove('rotate-45', 'translate-y-2');
+                    toggleSpans[1].classList.remove('opacity-0');
+                    toggleSpans[2].classList.remove('-rotate-45', '-translate-y-2');
+                } else {
+                    mobileMenu.classList.remove('translate-x-full');
+                    toggleSpans[0].classList.add('rotate-45', 'translate-y-2');
+                    toggleSpans[1].classList.add('opacity-0');
+                    toggleSpans[2].classList.add('-rotate-45', '-translate-y-2');
+                }
+            });
+        }
+
+        // Close menu on link click
+        if (mobileMenu) {
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full');
+                    toggleSpans[0].classList.remove('rotate-45', 'translate-y-2');
+                    toggleSpans[1].classList.remove('opacity-0');
+                    toggleSpans[2].classList.remove('-rotate-45', '-translate-y-2');
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
