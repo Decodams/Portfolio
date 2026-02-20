@@ -222,8 +222,7 @@
                         class="relative aspect-[4/5] rounded-[2rem] overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)]">
                         <img alt="Samuel Dim"
                             class="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-[2s]"
-                            loading="lazy"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA43u812CBX-y_Y61X5uliTfJlRtgU8EqQJZtLK08ZaDZdZBsqoqXyOrEDWcCkaS56yFrq52NyJixOjCkfG2JX_9m6M2Z9Nw1OFFPXrdjv9jGnUsOTDJsUcHKLCDGHqYr8vJ81M7c-3zwdr4i905NXkksFhRAgGO5C0LvAwDTCvqQ5HRW04oqbfFKK71G4YEln2ABQpi4Dv24oC-CuVhTaCRiAHxWiUHLDGd56rbEA1EWDS2eSnSA9bXtHr67Wi6Li_DCY3mHxqWpY" />
+                            fetchpriority="high" src="/images/face.jpg" />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
                         </div>
                     </div>
@@ -321,10 +320,10 @@
                         <p class="text-white/50 text-xl font-light">I am currently accepting inquiries for elite project
                             leadership and product advisory roles.</p>
                     </div>
-                    <button
-                        class="bg-white text-black hover:bg-accent-gold hover:text-black px-12 py-6 rounded-full text-sm font-black uppercase tracking-widest transition-all duration-500 whitespace-nowrap shadow-2xl">
+                    <a href="contact.html"
+                        class="bg-white text-black hover:bg-accent-gold px-12 py-6 rounded-full text-sm font-black uppercase tracking-widest transition-all duration-500 whitespace-nowrap shadow-2xl flex items-center justify-center">
                         Inquire Now
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -350,7 +349,7 @@
                 <a class="text-deep-purple hover:text-accent-gold transition-colors" href="https://wa.me/2348069698990">
                     <svg class="size-6 fill-current" viewBox="0 0 24 24">
                         <path
-                            d="M12 0c-6.627 0-12 5.373-12 12 0 2.114.547 4.098 1.503 5.828l-1.503 5.172 5.418-1.422c1.722.9 3.663 1.422 5.582 1.422 6.627 0 12-5.373 12-12s-5.373-12-12-12zm-4.704 15.618c-.347-.348-.546-.82-.546-1.32s.199-.972.546-1.319l1.868-1.868c.174-.174.41-.271.659-.271.248 0 .484.097.659.271l.659.659c.174.174.271.41.271.659s-.097.485-.271.659l-.659.659c-.174.174-.271.41-.271.659s.097.485.271.659l.659.659c.174.174.41.271.659.271.248 0 .484-.097.659-.271l.659-.659c.347-.348.819-.547 1.319-.547s.972.199 1.319.547l.659.659c.174.174.271.41.271.659s-.097.485-.271.659l-1.868 1.868c-.695.695-1.929.695-2.624 0l-3.238-3.238z" />
+                            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.407 3.481 2.241 2.242 3.48 5.227 3.481 8.408-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.301 1.657zm6.208-4.045c1.474.874 2.924 1.34 4.544 1.341 5.304 0 9.619-4.315 9.621-9.619.001-2.569-1.001-4.985-2.822-6.806s-4.236-2.822-6.807-2.823c-5.308 0-9.621 4.314-9.623 9.619-.001 1.761.477 3.479 1.383 4.973l-.907 3.31 3.407-.895zM17.848 14.53c-.307-.154-1.821-.899-2.103-1.002-.282-.102-.487-.154-.691.154-.206.307-.795 1.002-.974 1.204-.18.204-.359.231-.667.077-.307-.154-1.298-.479-2.472-1.527-.913-.815-1.53-1.821-1.709-2.128-.18-.307-.02-.473.134-.627.139-.138.307-.359.461-.538.154-.18.206-.307.307-.513.103-.206.052-.385-.026-.538-.077-.154-.691-1.667-.948-2.282-.25-.603-.503-.522-.691-.531l-.59-.011c-.206 0-.538.077-.82.385-.282.308-1.077 1.051-1.077 2.564 0 1.513 1.103 2.974 1.256 3.18.154.204 2.169 3.311 5.257 4.646.735.317 1.308.507 1.758.649.738.234 1.411.201 1.943.121.593-.088 1.821-.744 2.077-1.462.256-.718.256-1.334.18-1.462-.078-.127-.283-.204-.59-.359z" />
                     </svg>
                 </a>
                 <a class="text-deep-purple hover:text-accent-gold transition-colors"
@@ -399,17 +398,22 @@
         function initSliders() {
             const containers = document.querySelectorAll('.overflow-x-auto');
             containers.forEach(container => {
-                const prevBtn = container.parentElement.querySelector('button:has(.material-symbols-outlined:contains("west")), button:has(.material-symbols-outlined:contains("chevron_left"))');
-                const nextBtn = container.parentElement.querySelector('button:has(.material-symbols-outlined:contains("east")), button:has(.material-symbols-outlined:contains("chevron_right"))');
-
-                if (prevBtn && nextBtn) {
-                    prevBtn.addEventListener('click', () => {
-                        container.scrollBy({ left: -container.clientWidth * 0.8, behavior: 'smooth' });
-                    });
-                    nextBtn.addEventListener('click', () => {
-                        container.scrollBy({ left: container.clientWidth * 0.8, behavior: 'smooth' });
-                    });
-                }
+                const buttons = container.parentElement.querySelectorAll('button');
+                buttons.forEach(btn => {
+                    const icon = btn.querySelector('.material-symbols-outlined');
+                    if (icon) {
+                        const iconText = icon.textContent.trim();
+                        if (iconText === 'west' || iconText === 'chevron_left') {
+                            btn.addEventListener('click', () => {
+                                container.scrollBy({ left: -container.clientWidth * 0.8, behavior: 'smooth' });
+                            });
+                        } else if (iconText === 'east' || iconText === 'chevron_right') {
+                            btn.addEventListener('click', () => {
+                                container.scrollBy({ left: container.clientWidth * 0.8, behavior: 'smooth' });
+                            });
+                        }
+                    }
+                });
             });
         }
 

@@ -71,8 +71,8 @@
             class="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-10 py-3 md:py-4 rounded-full bg-black/80 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.3)] border border-white/10">
             <div class="flex items-center gap-3">
                 <a href="index.html" class="flex items-center gap-3">
-                    <div class="size-8 md:size-9 bg-primary flex items-center justify-center rounded-sm rotate-45">
-                        <span class="material-symbols-outlined text-gold -rotate-45 text-lg">diamond</span>
+                    <div class="size-8 md:size-9 bg-black flex items-center justify-center rounded-sm rotate-45">
+                        <span class="material-symbols-outlined text-gold -rotate-45 text-xl">diamond</span>
                     </div>
                     <h1 class="font-display text-lg md:text-xl font-black tracking-tighter text-white uppercase">SAMUEL
                         DIM</h1>
@@ -140,16 +140,20 @@
                 <!-- Right: Narrative Bio -->
                 <div class="md:col-span-6 md:col-start-8">
                     <div class="space-y-6">
-                        <h2 class="text-primary text-xs font-bold uppercase tracking-[0.5em]">The Visionary</h2>
+                        <h2 class="text-gold text-xs font-bold uppercase tracking-[0.5em]">The
+                            Visionary</h2>
                         <div class="h-px w-20 bg-primary/40"></div>
-                        <p class="text-lg md:text-xl text-primary/90 leading-relaxed font-light">
+                        <p class="text-gold md:text-xl text-primary/90 leading-relaxed font-light">
                             Samuel Dim is a visionary designer specializing in <span
-                                class="font-bold text-white">cinematic digital experiences</span>. With a focus on
-                            high-end editorial aesthetics, he blends deep purple typography with gold accents to create
-                            narratives that resonate with luxury audiences.
+                                class="font-bold text-white">cinematic digital experiences</span>.
+                            <span class="text-gold md:text-xl text-primary/90 leading-relaxed font-light"> With a focus
+                                on
+                                high-end editorial aesthetics, he blends deep purple typography with gold accents to
+                                create narratives that resonate with luxury audiences.</span>
                         </p>
-                        <p class="text-gray-400 leading-relaxed max-w-md">
-                            His approach transcends traditional UI/UX, treating every digital touchpoint as a frame in a
+                        <p class=" text-gray-400 leading-relaxed max-w-md">
+                            His approach transcends traditional UI/UX, treating every digital touchpoint as a frame
+                            in a
                             high-fashion film. From boutique startups to global conglomerates, Samuel brings a Midas
                             touch to digital product design.
                         </p>
@@ -165,13 +169,13 @@
                     <h3 class="text-4xl md:text-6xl font-bold tracking-tighter">Professional Journey</h3>
                 </div>
                 <div class="hidden md:flex gap-4">
-                    <button
-                        class="size-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary/20 transition-all">
-                        <span class="material-symbols-outlined">west</span>
+                    <button id="journey-prev"
+                        class="size-16 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold hover:text-black transition-all group">
+                        <span class="material-symbols-outlined font-light">west</span>
                     </button>
-                    <button
-                        class="size-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary/20 transition-all">
-                        <span class="material-symbols-outlined">east</span>
+                    <button id="journey-next"
+                        class="size-16 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold hover:text-black transition-all group">
+                        <span class="material-symbols-outlined font-light">east</span>
                     </button>
                 </div>
             </div>
@@ -259,6 +263,107 @@
                 </div>
             </div>
         </section>
+
+        <!-- Hall of Fame Section -->
+        <section class="py-32 px-8 md:px-24 bg-white/[0.02] border-y border-white/5">
+            <div class="mb-16">
+                <h2 class="text-gold text-xs font-bold uppercase tracking-[0.5em] mb-4">Excellence</h2>
+                <h3 class="text-4xl md:text-6xl font-black text-white italic font-serif">Hall of Fame</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Certificate 1 -->
+                <div class="certificate-card group cursor-pointer"
+                    onclick="openCertModal('../Certification/Agile Project Certification.jpeg', 'Agile Project Management', 'Introductory Foundation Online Course • Delivered by Management Study Guide MSG, Dovichi Worldwide Technology Company Limited & DoviLearn.com')">
+                    <div
+                        class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 group-hover:border-gold/50 transition-all">
+                        <img src="../Certification/Agile Project Certification.jpeg" alt="Agile Project Management"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                            loading="lazy">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                            <span
+                                class="text-gold text-[10px] font-bold tracking-widest uppercase mb-1">Certification</span>
+                            <h4 class="text-xl font-bold text-white">Agile Project Management</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certificate 2 -->
+                <div class="certificate-card group cursor-pointer"
+                    onclick="openCertModal('../Certification/Production and Operation Management.jpeg', 'Production & Operations Management', 'MasterClass Online Course • Delivered by Management Study Guide MSG, Dovichi Worldwide Technology Company Limited & DoviLearn.com')">
+                    <div
+                        class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 group-hover:border-gold/50 transition-all">
+                        <img src="../Certification/Production and Operation Management.jpeg"
+                            alt="Production & Operations Management"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                            loading="lazy">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                            <span
+                                class="text-gold text-[10px] font-bold tracking-widest uppercase mb-1">Certification</span>
+                            <h4 class="text-xl font-bold text-white">Production & Operations</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certificate 3 -->
+                <div class="certificate-card group cursor-pointer"
+                    onclick="openCertModal('../Certification/Technical Writing.jpeg', 'Mastering Technical Writing', 'Mastering the Art of Technical Writing Online Course • 4th July 2022 • Delivered by DoviLearn.com')">
+                    <div
+                        class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 group-hover:border-gold/50 transition-all">
+                        <img src="../Certification/Technical Writing.jpeg" alt="Technical Writing"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                            loading="lazy">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                            <span
+                                class="text-gold text-[10px] font-bold tracking-widest uppercase mb-1">Certification</span>
+                            <h4 class="text-xl font-bold text-white">Technical Writing</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificate Modal -->
+        <div id="cert-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center px-4">
+            <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" onclick="closeCertModal()"></div>
+            <div
+                class="relative bg-background-dark border border-white/10 rounded-3xl max-w-4xl w-full overflow-hidden shadow-2xl animate-reveal-up">
+                <button onclick="closeCertModal()"
+                    class="absolute top-6 right-6 z-10 size-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-black transition-all">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="aspect-[4/3] md:aspect-auto">
+                        <img id="modal-img" src="" alt="Certificate" class="w-full h-full object-contain bg-slate-900">
+                    </div>
+                    <div class="p-10 flex flex-col justify-center">
+                        <span class="text-gold font-bold uppercase tracking-[0.3em] text-xs mb-4">Official
+                            Certification</span>
+                        <h3 id="modal-title" class="text-3xl font-black text-white italic font-serif mb-6"></h3>
+                        <div class="h-px w-20 bg-gold/30 mb-8"></div>
+                        <p id="modal-desc" class="text-white/60 leading-relaxed text-lg"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            @keyframes reveal-up {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .animate-reveal-up {
+                animation: reveal-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            }
+        </style>
         <!-- Stats Section -->
         <section class="py-20 px-8 md:px-24">
             <div class="flex flex-wrap items-center justify-between gap-12 border-t border-white/10 pt-12">
@@ -332,9 +437,8 @@
         // Sliders functionality
         function initSliders() {
             const journeySlider = document.getElementById('journey-slider');
-            // Find buttons based on their material symbols
-            const prevBtn = document.querySelector('button:has(.material-symbols-outlined:contains("west"))');
-            const nextBtn = document.querySelector('button:has(.material-symbols-outlined:contains("east"))');
+            const prevBtn = document.getElementById('journey-prev');
+            const nextBtn = document.getElementById('journey-next');
 
             if (journeySlider && prevBtn && nextBtn) {
                 prevBtn.addEventListener('click', () => {
@@ -344,6 +448,27 @@
                     journeySlider.scrollBy({ left: journeySlider.clientWidth * 0.8, behavior: 'smooth' });
                 });
             }
+        }
+
+        // Certificate Modal Logic
+        function openCertModal(imgSrc, title, desc) {
+            const modal = document.getElementById('cert-modal');
+            const modalImg = document.getElementById('modal-img');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDesc = document.getElementById('modal-desc');
+
+            modalImg.src = imgSrc;
+            modalTitle.innerText = title;
+            modalDesc.innerText = desc;
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCertModal() {
+            const modal = document.getElementById('cert-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
         }
 
         document.addEventListener('DOMContentLoaded', initSliders);
